@@ -21,4 +21,5 @@ $(function () {
       .find(".shopping-item")
       .toggleClass("shopping-item__checked");
   });
+  
 });
