@@ -1,10 +1,10 @@
 $(function () {
   $("#js-shopping-list-form").submit(function (event) {
     event.preventDefault();
-    const inputText = $(event).val("#shopping-list-entry");
+    const $inputText = $(event).val("#shopping-list-entry");
     $(".shopping-list").append(
       '<li>\
-      <span class="shopping-item>' + inputText + '</span>\
+      <span class="shopping-item>' + $inputText + '</span>\
       <div class="shopping-item-controls">\
         <button class="shopping-item-toggle">\
           <span class="button-label">check</span>\
@@ -21,7 +21,7 @@ $(function () {
   });
 
   $(".shopping-list").on("click", ".shopping-item-toggle", function () {
-    $(".shopping-item").toggleClass("shopping-item__checked");
+    $(this).closest(".shopping-item").toggleClass("shopping-item__checked");
   });
 
 });
